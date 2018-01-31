@@ -1,0 +1,5 @@
+package com.jrpiassa.listatelefonica.repository;
+
+public interface ContatoRepository {
+	public void listarContatos();
+}

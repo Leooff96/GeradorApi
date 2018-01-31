@@ -1,0 +1,53 @@
+package com.jrpiassa.listatelefonica.resource;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jrpiassa.listatelefonica.model.Item;
+import com.jrpiassa.listatelefonica.repository.ItemRepository;
+
+@RestController
+@CrossOrigin("${origem-permitida}")
+public class ContatosResource {
+
+	@Autowired
+	private ItemRepository repository;
+
+	private static final String CONTATOS = "/contatos";
+
+	@GetMapping(CONTATOS)
+	public List<Item> listar() {
+		return repository.findAll();
+	}
+
+	@PostMapping(CONTATOS)
+	public Item adicionar(@RequestBody @Valid Item item) {
+		return repository.save(item);
+	}
+
+	@PutMapping(CONTATOS)
+	public Item alterar(@RequestBody @Valid Item item) {
+		return repository.save(item);
+	}
+
+	@DeleteMapping(CONTATOS)
+	public String deletar(@RequestBody @Valid Item item) {
+		try {
+			repository.delete(item);
+			return "OK!";
+		} catch (Exception e) {
+			return "Erro ao deletar: "+e.toString();
+		}
+
+	}
+}

@@ -1,0 +1,12 @@
+package com.jrpiassa.listatelefonica.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.jrpiassa.listatelefonica.model.Contato;
+import com.jrpiassa.listatelefonica.model.Item;
+
+public interface ContatoRepository extends JpaRepository<Item, Long> {
+	public List<Contato> listarContatos();
+}

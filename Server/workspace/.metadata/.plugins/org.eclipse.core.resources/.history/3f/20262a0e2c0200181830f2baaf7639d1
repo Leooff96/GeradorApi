@@ -1,0 +1,9 @@
+package com.jrpiassa.listatelefonica.repository;
+
+import java.util.List;
+
+import com.jrpiassa.listatelefonica.model.Contato;
+
+public interface ContatoRepository  {
+	public List<Contato> listarContatos();
+}

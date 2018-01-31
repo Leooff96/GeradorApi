@@ -1,0 +1,11 @@
+package com.jrpiassa.listatelefonica.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Contato {
+	
+	
+	
+	
+}

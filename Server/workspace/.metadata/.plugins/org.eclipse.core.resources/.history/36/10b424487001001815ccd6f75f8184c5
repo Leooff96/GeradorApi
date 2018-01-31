@@ -1,0 +1,28 @@
+package com.jrpiassa.listatelefonica.repository.Impl;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.jrpiassa.listatelefonica.model.Contato;
+import com.jrpiassa.listatelefonica.repository.ContatoRepository;
+
+public class ContatoRepositoryImpl implements ContatoRepository {
+
+	@Override
+	public List<Contato> listarContatos() {
+		List<Contato> lista = new ArrayList<>();
+		Contato contato = new Contato();
+		
+		contato.setNome("Teste 01");
+		contato.setTelefone("9999-9999");
+		contato.setData(new Date());
+		contato.setCor("blue");
+		
+		lista.add(contato);
+		return lista;
+	}
+
+	
+
+}

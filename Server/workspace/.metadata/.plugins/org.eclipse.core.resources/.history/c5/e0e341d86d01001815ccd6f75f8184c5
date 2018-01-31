@@ -1,0 +1,5 @@
+package com.jrpiassa.listatelefonica.repository.Impl;
+
+public class ContatoRepositoryImpl {
+
+}

@@ -1,0 +1,6 @@
+Servidor Rest
+
+O codigo aqui presente cria um servidor rest bem simples somente com a camada Controller
+
+Url:http://localhost:8080/contatos
+saida: [{"nome":"Jonas","telefone":"9999-9999","data":"2018-01-31","cor":"blue"}]

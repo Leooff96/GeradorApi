@@ -1,0 +1,12 @@
+package com.jrpiassa.listatelefonica.repository.Impl;
+
+import java.util.List;
+
+import com.jrpiassa.listatelefonica.model.Contato;
+import com.jrpiassa.listatelefonica.repository.ContatoRepository;
+
+public class ContatoRepositoryImpl implements ContatoRepository {
+
+	
+
+}
